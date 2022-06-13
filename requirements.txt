@@ -1,0 +1,7 @@
+fastparquet
+ipykernel
+jupyterlab
+numpy
+pandas
+pyarrow
+scikit-learn
