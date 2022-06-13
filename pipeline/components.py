@@ -1,4 +1,3 @@
-import argparse
 import os
 import pandas as pd
 import typing
@@ -225,45 +224,3 @@ def inference(
     predictions_df["prediction"] = predictions
 
     return predictions_df, scores
-
-
-##################### PIPELINE CODE #############################
-
-# if __name__ == "__main__":
-#     mode = args.mode if args.mode else "inference"
-#     start_date = args.start if args.start else "01/01/2020"
-#     end_date = args.end if args.end else "01/31/2020"
-#     print(f"Running the {mode} pipeline from {start_date} to {end_date}...")
-
-#     # Clean and featurize data
-#     df = load_data(start_date, end_date)
-#     clean_df = clean_data(df, start_date, end_date)
-#     features_df = featurize_data(clean_df)
-
-#     feature_columns = [
-#         "pickup_weekday",
-#         "pickup_hour",
-#         "pickup_minute",
-#         "work_hours",
-#         "passenger_count",
-#         "trip_distance",
-#         "RatecodeID",
-#         "congestion_surcharge",
-#         "loc_code_diffs",
-#     ]
-#     label_column = "high_tip_indicator"
-
-#     # If training, train a model and save it
-#     if mode == "training":
-#         train_df, test_df = train_test_split(features_df)
-#         train_model(train_df, test_df, feature_columns, label_column)
-
-#     # If inference, load the model and make predictions
-#     elif mode == "inference":
-#         predictions, scores = inference(
-#             features_df, feature_columns, label_column
-#         )
-#         print(scores)
-
-#     else:
-#         print(f"Mode {mode} not supported.")
