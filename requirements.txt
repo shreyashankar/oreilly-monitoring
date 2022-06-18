@@ -1,3 +1,4 @@
+duckdb
 fastparquet
 ipykernel
 jupyterlab
